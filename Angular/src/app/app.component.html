@@ -1,0 +1,15 @@
+﻿<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="authenticationService.userLogged">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div>
+</nav>
+
+<!-- main app container -->
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
+<angular-weather-widget [APIKEY]="'ccd96460056af41f4f98812dd0e690aa'" [width]="'380px'" [height]="'auto'" [backgroundColor]="'darkblue'" [isBoxShadow]="true" [borderRadius]="'5px'" [locationFontSize]="'35px'" [locationFontColor]="'#fff'" [status]="true" [statusFontColor]="'#fff'" [statusFontSize]="'18px'" [temperature]="true" [tempratureFontColor]="'#fff'" [tempratureFontSize]="'75px'" [weatherImages]="true" [weatherImageWidth]="'110px'" [weatherImageHeight]="'110px'" [geoLocation]="false" [location]="'paris'" [isWind]="true" [windFontColor]="'#fff'" [windFontSize]="'17px'" [humidityFontColor]="'#fff'" [humidityFontSize]="'17px'">
+</angular-weather-widget>
